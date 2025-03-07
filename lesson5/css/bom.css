@@ -1,0 +1,19 @@
+body {
+    background-color: lavender;
+    color: #333;
+}
+p button, h2 {
+    width: 19.8%;
+    text-align: center;
+    font-size: 200%;
+}
+h2 {
+    width: 100%;
+    margin-top: 2%;
+}
+button {
+    font-size: 200%;
+    text-align: center;
+    width: 33.11%;
+    align-self: center;
+}
