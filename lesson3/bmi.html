@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="css/bmi.css">
+    <script>
+        document.getElementById("weight").focus()
+        function calcBMI() {
+            var weight = parseInt(document.getElementById("weight").value)
+            var height = parseInt(document.getElementById("height").value)
+            var result
+            if (isNaN(weight) || (weight < 60 || weight > 1000)) {
+                result = "Weight was not a valid number."
+                weight = ""
+                document.getElementById("weight").value = ""
+                document.getElementById("weight").focus()
+            }
+            else if (isNaN(height) || (height < 35 || height > 90)) {
+                result = "Height was not a valid number."
+                height = ""
+                document.getElementById("height").value = ""
+                document.getElementById("height").focus()
+            }
+            else {
+                result = "Your BMI is: " + Math.floor((weight * 703) / (height**2))
+            }
+            document.getElementById("bmiResult").innerHTML = result
+        }
+        function clearRes() {
+            document.getElementById("bmiResult").innerHTML = ""
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Body Mass Index</h1>
+            <form>
+                <p><label id="label" for="weight">Weight (Lb.s)</label>
+                    <input id="weight" type="number" min="60" max="1000" width="10"></p>
+            
+                <p><label id="label" for="height">Height (In.s)</label>
+                    <input type="number" id="height" min="35" max="90" width="10"></p>
+            
+                <p><button type="button" onclick="calcBMI()">Calculate</button>
+                    <button type="reset" value="Reset" onclick="clearRes()">Clear All</button></p>
+            </form>
+            <hr>
+            <h1 id="bmiResult"></h1>
+            <p>(Normal: 18.5 to 25)</p>
+        </section>
+    </main>
+</body>
+</html>

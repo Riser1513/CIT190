@@ -1,0 +1,23 @@
+body {
+    font-family: Spectral, 'Times New Roman', Times, serif;
+    background-image: url('../media/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center;
+}
+section {
+    width: 75%;
+    margin-left: 12.5%;
+}
+p, h1, label {
+    color: white;
+    text-align: center;
+    margin: 2%;
+}
+input {
+    width: 10%
+}
+input:focus {
+    background-color: aqua;
+    color: black;
+}

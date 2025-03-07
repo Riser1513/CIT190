@@ -133,3 +133,11 @@ nav ul li ul li a:hover {
     display: flex;
     flex-direction: column;
 }
+#lesson3:hover > ul{
+    display: flex;
+    flex-direction: column;
+}
+#lesson4:hover > ul {
+    display: flex;
+    flex-direction: column;
+}
