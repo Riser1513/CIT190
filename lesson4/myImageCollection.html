@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Collection</title>
+</head>
+<body onload="processName()">
+    <a href="media/pink.jpg">
+        <img src="media/pink_thumb.jpg" alt="Very pink build in Terraria for the Labour of Love update">
+    </a>
+    <a href="media/ocean.jpg">
+        <img src="media/ocean_thumb.jpg" alt="Ocean build in Terraria to show off coral furniture">
+    </a>
+    <a href="media/desert.jpg">
+        <img src="media/desert_thumb.jpg" alt="Person desert fishing in Terraria">
+    </a>
+    <a href="media/forest.jpg">
+        <img src="media/forest_thumb.jpg" alt="Guy standing near a fairy stump in Terraria">
+    </a>
+    <h3>Photo name</h3>
+    <p id="name">
+        <script>
+            function processName() {
+                var contents = "| "
+                for (var i = 0; i < document.images.length; i++) {
+                    contents += i+1 + ". " + document.images[i].alt + "&nbsp;&nbsp; "
+                }
+                document.getElementById("name").innerHTML = contents
+                processSource()
+            }
+        </script>
+    </p>
+    <h3>Photo source</h3>
+    <p id="source">
+        <script>
+            function processSource() 
+            {
+                var contents = "| "
+                for (var i = 0; i < document.images.length; i++) {
+                    contents += i+1 + ". " + document.images[i].src + "&nbsp;&nbsp; "
+                }
+                document.getElementById("source").innerHTML = contents
+                processLinks()
+            }
+        </script>
+    </p>
+    <h3>Photo text links</h3>
+    <p id="links">
+        <script>
+            function processSource() {
+                var contents = "| "
+                for (var i = 0; i < document.images.length; i++) {
+                    contents += "<a href=" + document.links[i].href + ">" + document.images[i].alt + "</a> | "
+                }
+                document.getElementById("links").innerHTML = contents
+            }
+        </script>
+    </p>
+</body>
+</html>

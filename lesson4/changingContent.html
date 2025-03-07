@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+    </style>
+</head>
+<body>
+    <form>
+        <p><label for="white_text">Click for White Text</label><button id="white_text" onclick="whiteText()" type="button">Click!</button></p>
+        <p><label for="color">Type in a text color</label><input type="text" id="color"><button onclick="applyColor()" type="button">Apply!</button></p>
+        <p><button>Reset</button></p>
+    </form>
+    <script>
+        function whiteText() {
+            document.body.style.color = 'white'
+            document.body.style.backgroundColor = 'black'
+        }
+        function applyColor() {
+            var color = document.getElementById("color").value
+            document.body.style.color = color
+        }
+    </script>
+</body>
+</html>
