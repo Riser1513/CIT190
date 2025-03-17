@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+    <game>
+        <title>Terraria</title>
+        <description>A 2D, enclosed, blocky sandbox game where you explore and fight a mass amount of bosses</description>
+        <price>$9,99</price>
+        <release>
+            <day>16</day>
+            <month>May</month>
+            <year>2011</year>
+        </release>
+    </game>
+    <game>
+        <title>Minecraft</title>
+        <description>A 3D, massive open-world, blocky sandbox game where you craft and build</description>
+        <price>$29,99</price>
+        <release>
+            <day>18</day>
+            <month>November</month>
+            <year>2011</year>
+        </release>
+    </game>
+    <game>
+        <title>A Game About Digging a Hole</title>
+        <description>Read the title</description>
+        <price>$4,99</price>
+        <release>
+            <day>7</day>
+            <month>February</month>
+            <year>2025</year>
+        </release>
+    </game>
+    <game>
+        <title>Skyrim</title>
+        <description>'A fantasy action role–playing game, playable from either a first or third–person perspective.' – Wikipedia</description>
+        <price>$39,99</price>
+        <release>
+            <day>11</day>
+            <month>November</month>
+            <year>2011</year>
+        </release>
+    </game>
+    <game>
+        <title>Cult of the Lamb</title>
+        <description>A cult-building simulator where you play as a lamb/goat and spend days upon days building a cult from scratch</description>
+        <price>$24,99</price>
+        <release>
+            <day>11</day>
+            <month>August</month>
+            <year>2022</year>
+        </release>
+    </game>
+</node>

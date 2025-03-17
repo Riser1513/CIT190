@@ -1,0 +1,7 @@
+{"games":[
+    {"Title":"Terraria",                   "Description":"A 2D, enclosed, blocky sandbox game where you explore and fight a mass amount of bosses",                      "Price":"$9.99", "ReleaseDate":{"Day":"16","Month":"May",     "Year":"2011"}},
+    {"Title":"Minecraft",                  "Description":"A 3D, massive open-world, blocky sandbox game where you craft and build",                                      "Price":"$29.99","ReleaseDate":{"Day":"18","Month":"November","Year":"2011"}},
+    {"Title":"A Game About Digging a Hole","Description":"Read the title",                                                                                               "Price":"$4.99", "ReleaseDate":{"Day":"7", "Month":"February","Year":"2025"}},
+    {"Title":"The Elder Scrolls V: Skyrim","Description":"'A fantasy action role–playing game, playable from either a first or third–person perspective.' – Wikipedia",  "Price":"$39.99","ReleaseDate":{"Day":"11","Month":"November","Year":"2011"}},
+    {"Title":"Cult of the Lamb",           "Description":"A cult-building simulator where you play as a lamb/goat and spend days upon days building a cult from scratch","Price":"$24.99","ReleaseDate":{"Day":"11","Month":"August",  "Year":"2022"}}
+]}

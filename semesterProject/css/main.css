@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    padding: 1%;
+    font-size: 110%;
+}
+
+body {
+    background-image: url('../media/background.png');
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position-y: -200px;
+    display: grid;
+    grid-template-columns: 22% repeat(6, 1fr);
+    grid-template-rows: repeat(5, 19%);
+    max-height: 100vh;
+}
+
+ul, nav, aside {
+    list-style: none;
+    background-color: bisque;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    opacity: 75%;
+}
+
+li {
+    margin: 10%;
+    font-size: 1.75em;
+}
+
+a:hover, li:hover {
+    background-color: blue;
+    color: black;
+}
+
+aside {
+    /* display: flex; */
+    width: 20%;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    flex: 1 0 auto;
+    grid-column-start: 1;
+}
+
+main {
+    flex: 1 0 auto;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    width: 0%;
+    text-align: center;
+}
+
+footer {
+    opacity: 70%;
+    flex-shrink: 0;
+    background-color: aliceblue;
+    width: 100%;
+    height: 115%;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 6;
+}
+
+#game_board {
+    display: grid;
+    grid-template-columns: repeat(20, 10px);
+    grid-template-rows: repeat(20, 10px);
+    background-color: forestgreen;
+    box-sizing: content-box;
+    width: fit-content;
+}
+
+button {
+    margin-left: 1%;
+    font-size: 80%;
+}
+
+main > p {
+    margin: 0;
+}
+
+.snake {
+    background-color: grey;
+    border: solid black 1px;
+}
+
+.food {
+    background-color: red;
+    border: solid black 1px;
+}
+
+#tic {
+    display: grid;
+    grid-template-columns: repeat(3, 10%);
+    grid-template-rows: repeat(3, 28%);
+    height: 100%;
+}
+
+#a1 {
+    grid-row: 1/1;
+    grid-column: 1/1;
+}
+
+#a2 {
+    grid-row: 1/1;
+    grid-column: 2/2;
+}
+
+#a3 {
+    grid-row: 1/1;
+    grid-column: 3/3;
+}
+
+#b1 {
+    grid-row: 2/2;
+    grid-column: 1/1;
+}
+
+#b2 {
+    grid-row: 2/2;
+    grid-column: 2/2;
+}
+
+#b3 {
+    grid-row: 2/2;
+    grid-column: 3/3;
+}
+
+#c1 {
+    grid-row: 3/3;
+    grid-column: 1/1;
+}
+
+#c2 {
+    grid-row: 3/3;
+    grid-column: 2/2;
+}
+
+#c3 {
+    grid-row: 3/3;
+    grid-column: 3/3;
+}
+
+canvas {
+    border: solid black 2px;
+    background-color: lime;
+    opacity: 50%;
+    display: inline;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (width < 900px) {
+    * {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        grid-row: 7/7;
+    }
+}
