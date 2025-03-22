@@ -73,11 +73,22 @@ footer {
 
 #game_board {
     display: grid;
-    grid-template-columns: repeat(20, 10px);
-    grid-template-rows: repeat(20, 10px);
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: repeat(20, 5%);
     background-color: forestgreen;
     box-sizing: content-box;
-    width: fit-content;
+    width: 100%;
+    height: 70%;
+    opacity: 73%;
+}
+
+#border {
+    box-sizing: content-box;
+    padding: 0;
+    margin-bottom: 10%;
+    width: 25%;
+    height: 100%;
+    /* opacity: 73%; */
 }
 
 button {

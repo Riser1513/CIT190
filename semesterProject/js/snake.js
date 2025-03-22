@@ -29,6 +29,11 @@ function draw() {
 function drawSnake() {
     snake.forEach((segment) => {
         const snakeElement = createGameElement('div','snake')
+        if (snake[0] == segment) {
+            snakeElement.style.backgroundColor = 'lime'
+        }
+        snakeElement.style.width = '100%'
+        snakeElement.style.height = '100%'
         setPosition(snakeElement, segment)
         board.appendChild(snakeElement)
     })
