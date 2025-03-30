@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label, button {
+            width:200px;
+            float:left;
+        }
+        input {
+            width: 190px;
+        }
+    </style>
+</head>
+<body>
+    <form action="localConfirmation.html" id="form">
+        <p><label>Name</label><input type="text" id="name" required></p>
+        <p><label>Job</label><input type="text" id="job" required></p>
+        <p><label>Email</label><input type="text" id="email" required></p>
+        <p><label>Favourite Game</label><input type="text" id="game" required></p>
+        <p><button type="button" id="submit">Submit</button><button type="reset" value="reset">Reset</button></p>
+    </form>
+    <script src="js/sessionForm.js"></script>
+</body>
+</html>

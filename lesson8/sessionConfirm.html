@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">Yhank you for submitting, </h1>
+    <h3 id="job">You've confirmed that you're a </h3>
+    <h3 id="email">Your email is </h3>
+    <h3 id="game">And that your favourite game is </h3>
+    <script>
+        document.getElementById('head').innerHTML += sessionStorage.name + '.'
+        document.getElementById('job').innerHTML += sessionStorage.job + ','
+        document.getElementById('email').innerHTML += sessionStorage.email + ','
+        document.getElementById('game').innerHTML += sessionStorage.game + '.'
+    </script>
+</body>
+</html>

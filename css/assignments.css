@@ -125,27 +125,7 @@ nav ul li ul li a {
 nav ul li ul li a:hover {
     color: green;
 }
-#lesson1:hover > ul{
-    display: flex;
-    flex-direction: column;
-}
-#lesson2:hover > ul {
-    display: flex;
-    flex-direction: column;
-}
-#lesson3:hover > ul{
-    display: flex;
-    flex-direction: column;
-}
-#lesson4:hover > ul {
-    display: flex;
-    flex-direction: column;
-}
-#lesson5:hover > ul {
-    display: flex;
-    flex-direction: column;
-}
-#lesson6:hover > ul {
+#lesson1:hover > ul, #lesson8:hover > ul, #lesson7:hover > ul, #lesson6:hover > ul, #lesson5:hover > ul, #lesson4:hover > ul, #lesson3:hover > ul, #lesson2:hover > ul {
     display: flex;
     flex-direction: column;
 }
