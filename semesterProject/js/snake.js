@@ -123,7 +123,7 @@ function handleKeyPress(event) {
     } else {
         switch (event.key) {
             case 'ArrowUp':
-                if (direction == 'up') {
+                if (direction == 'down') {
                     break;
                 }
                 else {
@@ -131,7 +131,7 @@ function handleKeyPress(event) {
                     break
                 }
             case 'ArrowDown':
-                if (direction == 'down') {
+                if (direction == 'up') {
                     break;
                 }
                 else {
@@ -139,7 +139,7 @@ function handleKeyPress(event) {
                     break
                 }
             case 'ArrowLeft':
-                if (direction == 'left') {
+                if (direction == 'right') {
                     break;
                 }
                 else {
@@ -147,7 +147,7 @@ function handleKeyPress(event) {
                     break
                 }
             case 'ArrowRight':
-                if (direction == 'right') {
+                if (direction == 'left') {
                     break;
                 }
                 else {

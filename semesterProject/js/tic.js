@@ -966,7 +966,7 @@ function drawLine() {
         contextList[6].lineTo(0, gridList[0].height)
         contextList[6].stroke()
     }
-    document.getElementById('tic').style.display = 'none'
+    // document.getElementById('tic').style.display = 'none'
     document.getElementById('winner').style.display = 'block'
     document.getElementById('winner').innerHTML = "The winner is: " + winner
 }

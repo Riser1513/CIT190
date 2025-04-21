@@ -1,0 +1,48 @@
+.accordion {
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-bottom:1px solid black;
+    width:30%;
+    display:block;
+}
+
+.active, .accordion:hover {
+    color:white;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    border-bottom:1px black solid;
+}
+
+.dragon.active, .dragon.accordion:hover {
+    background-color: purple;
+}
+.dragon.panel {
+    background-color: black;
+    color: white;
+}
+
+.wither.active, .wither.accordion:hover {
+    background-color: #444;
+}
+.wither.panel {
+    background-color: #222;
+    color: white;
+}
+
+.warden.active, .warden.accordion:hover {
+    background-color: darkcyan;
+}
+.warden.panel {
+    background-color: darkslategray;
+    color: white;
+}

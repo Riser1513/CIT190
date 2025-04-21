@@ -1,0 +1,37 @@
+#photo-viewer {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+  
+#photo-viewer.is-loading:after {
+    content: url('../img/load.gif');
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+#photo-viewer img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+}
+
+#thumbnails {
+    margin: 10px 5px 1% 30%;
+    height: 60px;
+    border: solid black 5px;
+    padding-bottom: 1.22%;
+    padding-left: 1%;
+    width: 40%;
+}
+      
+a.active {
+    opacity: 0.3;
+}
+
+h1 {
+    text-align: center;
+}

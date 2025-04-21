@@ -1,0 +1,11 @@
+canvas {
+    align-self: center;
+    justify-self: center;
+    margin-left: 24.4%;
+    margin-right: 24.4%;
+    border: 5px solid black;
+}
+p {
+    margin-top: 0;
+    margin-left: 46%;
+}
