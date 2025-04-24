@@ -1,0 +1,45 @@
+* {
+    text-align: center;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-areas:
+    '.       header  header    header  .'
+    '.       .       search    .       .'
+    '.       filter  filter    filter  .';
+    position: relative;
+}
+
+img {
+    height: 150px;
+    display: none;
+}
+
+.active {
+    display: inline;
+}
+
+header {
+    grid-area: header;
+}
+
+#gallery {
+    grid-area: content;
+}
+
+#search {
+    grid-area: search;
+}
+
+#buttons {
+    grid-area: filter;
+    margin: .5%;
+    background-color: aliceblue;
+}
+
+button {
+    margin: .1%;
+    padding: .4%;
+    width: 180px;
+}
