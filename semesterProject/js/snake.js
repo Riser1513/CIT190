@@ -1,3 +1,4 @@
+// Declaring all variables
 const board = document.getElementById('game_board')
 const instructionTxt = document.getElementById('instructionTxt')
 const gridSize = 20
@@ -10,6 +11,7 @@ let gameSpeedDelay = 250
 let gameStarted = false
 
 function startGame() {
+    // Starting the game
     gameStarted = true
     console.log('start')
     instructionTxt.style.display = 'none';
@@ -21,12 +23,14 @@ function startGame() {
 }
 
 function draw() {
+    // Drawing snake & food
     board.innerHTML = ''
     drawSnake()
     drawFood()
 }
 
 function drawSnake() {
+    // Drawing snake
     snake.forEach((segment) => {
         const snakeElement = createGameElement('div','snake')
         if (snake[0] == segment) {
@@ -40,17 +44,20 @@ function drawSnake() {
 }
 
 function createGameElement(tag, className) {
+    // Making game elements, such as snake parts or the food
     const element = document.createElement(tag)
     element.className = className
     return element
 }
 
 function setPosition(element, position) {
+    // Setting positions of elements
     element.style.gridColumn = position.x
     element.style.gridRow = position.y
 }
 
 function drawFood() {
+    // Drawing food
     if (gameStarted) {
         const foodElement = createGameElement('div', 'food')
         setPosition(foodElement, food)
@@ -59,6 +66,7 @@ function drawFood() {
 }
 
 function generateFood() {
+    // Making the food
     let x = Math.floor(Math.random() * gridSize) + 1
     let y = Math.floor(Math.random() * gridSize) + 1
     snake.forEach((segment) => {
@@ -81,6 +89,7 @@ function generateFood() {
 }
 
 function move() {
+    // Moving the snake
     const head = {...snake[0]}
 
     switch (direction) {
@@ -101,6 +110,7 @@ function move() {
     snake.unshift(head)
 
     if (head.x == food.x && head.y == food.y) {
+        // Eating the food
         food = generateFood()
         increaseSpeed()
         clearInterval(gameInterval)
@@ -116,6 +126,7 @@ function move() {
 }
 
 function handleKeyPress(event) {
+    // Making key presses do stuff
     if ((!gameStarted && event.code === 'Space') ||
         (!gameStarted && event.key  === ' '))
     {
@@ -160,6 +171,7 @@ function handleKeyPress(event) {
 }
 
 function increaseSpeed() {
+    // Gradually increses the speed of the game
     if (gameSpeedDelay > 150) {
         gameSpeedDelay -= 5
     } else if (gameSpeedDelay > 100) {
@@ -172,6 +184,7 @@ function increaseSpeed() {
 }
 
 function checkCollision() {
+    // Checking collision for the snake
     const head = snake[0]
     if (head.x < 1 || head.x > gridSize || head.y < 1 || head.y > gridSize) {
         resetGame()
@@ -185,6 +198,7 @@ function checkCollision() {
 }
 
 function resetGame() {
+    // Resets the game
     stopGame()
     snake = [{x: 10, y: 10}]
     direction = 'right'
@@ -193,9 +207,11 @@ function resetGame() {
 }
 
 function stopGame() {
+    // Stops the game
     clearInterval(gameInterval)
     gameStarted = false
     instructionTxt.style.display = 'block'
 }
 
+// Checking for key presses
 document.addEventListener('keydown', handleKeyPress)

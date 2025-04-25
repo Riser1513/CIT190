@@ -45,7 +45,7 @@ aside {
 }
 
 main {
-    flex: 1 0 auto;
+    /* flex: 1 0 auto; */
     grid-column-start: 2;
     grid-column-end: 7;
     grid-row-start: 1;
@@ -171,6 +171,39 @@ canvas {
     height: 100%;
 }
 
+.board {
+    width: 500px;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+    background-color: none;
+    /* border: solid 2px blue; */
+}
+
+.dart {
+    position: fixed;
+    width: 12%;
+    right: 32%;
+    top: 52.5%;
+    transition: all 0.1s ease;
+    /* transform: rotate(-90deg); */
+    /* border-left: solid 2px black; */
+    /* border-top: solid 2px black; */
+    padding: 0;
+}
+
+#dartBoard {
+    width: 100%;
+}
+
+.rotated {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+
 @media screen and (width < 900px) {
     * {
         font-size: 1.1rem;
@@ -178,5 +211,11 @@ canvas {
 
     footer {
         grid-row: 7/7;
+    }
+
+    .board {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
     }
 }

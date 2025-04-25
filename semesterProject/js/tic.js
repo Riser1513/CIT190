@@ -1,32 +1,41 @@
+// Declaring all variables
+
+// Canvas array
 const gridList = [
     document.getElementById('a1'),document.getElementById('a2'),document.getElementById('a3'),
     document.getElementById('b1'),document.getElementById('b2'),document.getElementById('b3'),
     document.getElementById('c1'),document.getElementById('c2'),document.getElementById('c3')
 ]
 
+// Context array
 const contextList = [
     gridList[0].getContext('2d'),gridList[1].getContext('2d'),gridList[2].getContext('2d'),
     gridList[3].getContext('2d'),gridList[4].getContext('2d'),gridList[5].getContext('2d'),
     gridList[6].getContext('2d'),gridList[7].getContext('2d'),gridList[8].getContext('2d')
 ]
 
+// Which are corners & which are sides
 const corners = [0,2,6,8]
 const sides = [1,3,5,7]
 
 const neverMove = Math.floor(Math.random() * 8)
 
+// None, Xs, and Os
 const blank = document.getElementById('blank')
 const os = document.getElementById('os')
 const xs = document.getElementById('xs')
 
+// X & O context
 const oCont = os.getContext('2d')
 const xCont = xs.getContext('2d')
 
+// Draw O
 oCont.lineWidth = 10
 oCont.beginPath()
 oCont.arc(150, 75, 60, 0, 2 * Math.PI)
 oCont.stroke()
 
+// Draw X
 xCont.lineWidth = 10
 xCont.moveTo(0,0)
 xCont.lineTo(xs.width,xs.height)
@@ -35,6 +44,7 @@ xCont.moveTo(xs.width,0)
 xCont.lineTo(0,xs.height)
 xCont.stroke()
 
+// Random tile for Computer's 1st move
 const firstTurn = Math.floor(Math.random() * 9)
 
 let moves = []
@@ -48,6 +58,7 @@ let winner = ''
 let line = ''
 
 function computerTurnF() {
+    // Calculating Computer Moves
     if (computerTurn) {
         if (firstTurnB) {
             contextList[firstTurn].lineWidth = 10
@@ -637,6 +648,7 @@ function computerTurnF() {
             }
             if (computerTurn && winner == '') {
                 for (let a = 0; a < gridList.length; a++) {
+                    // Semi-random moves
                     if (gridList[a].toDataURL() == blank.toDataURL()) {
                         if (moves.length > 3 && !moves.includes(4) && computerTurn) {
                             contextList[4].lineWidth = 10
@@ -706,6 +718,7 @@ function computerTurnF() {
 }
 
 function playerTurn() {
+    // Player turn
     if (!computerTurn) {
         for (let a = 0; a < gridList.length; a++) {
             gridList[a].addEventListener('click', function() {
@@ -724,6 +737,7 @@ function playerTurn() {
 }
 
 function game() {
+    // Starting & running the game
     gameInterval = setInterval(() => {
         if (winner == '') {
             checkWin()
@@ -738,6 +752,8 @@ function game() {
 }
 
 function checkWin() {
+    // Checks who wins
+
     if (moves.includes(0) && moves.includes(1) && moves.includes(2)) {
         if (gridList[1].toDataURL() == xs.toDataURL() && gridList[2].toDataURL() == xs.toDataURL() && gridList[0].toDataURL() == xs.toDataURL()) {
             console.log('comp 1 & 2')
@@ -846,6 +862,7 @@ function checkWin() {
 }
 
 function drawLine() {
+    // Draws winning lines
     if (line == 'top') {
         console.log('t')
         contextList[0].lineWidth = 20
@@ -966,9 +983,11 @@ function drawLine() {
         contextList[6].lineTo(0, gridList[0].height)
         contextList[6].stroke()
     }
-    // document.getElementById('tic').style.display = 'none'
+
+    // Sets winner text
     document.getElementById('winner').style.display = 'block'
     document.getElementById('winner').innerHTML = "The winner is: " + winner
 }
 
+// Game initiator
 game()
